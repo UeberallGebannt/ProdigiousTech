@@ -6,6 +6,8 @@ import lykrast.prodigytech.common.capability.HotAirAeroheater;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -13,6 +15,7 @@ import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class TileAeroheaterMagmatic extends TileEntity implements ITickable {
     private HotAirAeroheater hotAir;
@@ -27,9 +30,18 @@ public class TileAeroheaterMagmatic extends TileEntity implements ITickable {
 	
 	public void checkActive()
 	{
+
 		Block below = world.getBlockState(pos.down()).getBlock();
-		if (below == Blocks.LAVA || below == Blocks.FLOWING_LAVA) active = true;
+		if (below == Blocks.LAVA || below == Blocks.FLOWING_LAVA || generatesHeat(below)) active = true;
 		else active = false;
+	}
+
+	private boolean generatesHeat(Block block) {
+		for (ItemStack itemStack : OreDictionary.getOres("listGeneratesHeat")) {
+			if (itemStack.getItem().equals(Item.getItemFromBlock(block)))
+				return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -109,7 +121,7 @@ public class TileAeroheaterMagmatic extends TileEntity implements ITickable {
 
 		@Override
 		protected void resetRaiseClock() {
-			//10 seconds to reach 80 °C (when Draft Furnace starts working)
+			//10 seconds to reach 80 ï¿½C (when Draft Furnace starts working)
 			temperatureClock = 4;
 		}
 
