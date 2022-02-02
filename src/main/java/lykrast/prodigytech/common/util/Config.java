@@ -90,7 +90,7 @@ public class Config {
 				"By how much ore outputs are multiplied by when passing them through the Rotary Grinder");
 		autoOreRecipes = cfg.getBoolean("autoOreRecipes", CATEGORY_MACHINES, true, 
 				"Automatically generate Rotary Grinder, Magnetic Reassembler and Ore Refinery recipes to process ores?\n"
-				+ "If false, only recipes for vanilla ores and Prodigy Tech ingots will be registered");
+				+ "If false, only recipes for vanilla ores and Prodigigious Tech ingots will be registered");
 		//HeatSawmill
 		heatSawmillProcessTime = cfg.getInt("heatSawmillProcessTime", CATEGORY_MACHINES, 200, 1, 3000, 
 				"The base amount of time (in ticks) that the Heat Sawmill takes to process 1 item");
