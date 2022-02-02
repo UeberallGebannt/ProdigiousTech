@@ -2,7 +2,7 @@
 #----------------------------
 #Creative Tabs
 #----------------------------
-itemGroup.prodigytech=Prodigy Tech
+itemGroup.prodigytech=Prodigious Tech
 itemGroup.ptmysterytreats=Mystery Treats
 
 #----------------------------
@@ -14,7 +14,7 @@ tile.prodigytech.explosion_furnace.tooltip=Uses an explosive reaction\nto proces
 
 #Aeroheaters
 tile.prodigytech.magmatic_aeroheater.name=Magmatic Aeroheater
-tile.prodigytech.magmatic_aeroheater.tooltip=Makes constant hot air when above Lava
+tile.prodigytech.magmatic_aeroheater.tooltip=Makes constant hot air when above Lava or other hot blocks
 tile.prodigytech.solid_fuel_aeroheater.name=Solid Fuel Aeroheater
 tile.prodigytech.solid_fuel_aeroheater.tooltip=Makes hot air using Furnace fuels\nTurn off with redstone signal
 tile.prodigytech.energion_aeroheater.name=Energion Aeroheater

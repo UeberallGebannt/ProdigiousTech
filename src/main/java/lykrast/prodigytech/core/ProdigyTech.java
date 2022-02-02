@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 	dependencies = ProdigyTech.DEPENDENCIES)
 public class ProdigyTech {
     public static final String MODID = "prodigytech",
-    		NAME = "Prodigy Tech",
+    		NAME = "Prodigious Tech",
     		VERSION = "@VERSION@",
     		DEPENDENCIES = "required-after:patchouli;";
     
